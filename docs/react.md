@@ -87,7 +87,7 @@ ReactDOM offers a simple method to render React elements to the DOM which looks 
 
 The code editor has a simple JSX component. Use the ReactDOM.render() method to render this component to the page. You can pass defined JSX elements directly in as the first argument and use document.getElementById() to select the DOM node to render them to. There is a div with id='challenge-node' available for you to use. Make sure you don't change the JSX constant.
 
-```
+```jsx harmony
 const JSX = (
   <div>
     <h1>Hello World</h1>
@@ -108,7 +108,7 @@ In fact, the naming convention for all HTML attributes and event references in J
 
 Apply a class of myDiv to the div provided in the JSX code.
 
-```
+```jsx harmony
 const JSX = (
   <div className="myDiv">
     <h1>Add a class to this div</h1>
@@ -118,3 +118,80 @@ const JSX = (
 
 ## React: Learn About Self-Closing JSX Tags
 
+Any JSX element can be written with a self-closing tag, and every element must be closed. The line-break tag, for example, must always be written as <br /> in order to be valid JSX that can be transpiled. A <div>, on the other hand, can be written as <div /> or <div></div>. The difference is that in the first syntax version there is no way to include anything in the <div />.
+
+```jsx harmony
+const JSX = (
+  <div>
+    <h2>Welcome to React!</h2> <br />
+    <p>Be sure to close all tags!</p>
+    <hr />
+  </div>
+);
+```
+
+## React: Create a Stateless Functional Component
+
+There are two ways to create a React component. 
+* Javascript Function that returns null or JSX
+* ES6 Class
+
+### JavaScript function. Defining a component in this way creates a stateless functional component. 
+
+A stateless component as one that can receive data and render it, but does not manage or track changes to that data. 
+
+To create a component with a function, you simply write a JavaScript function that returns either JSX or null. 
+
+**Note**: One important thing to note is that React requires your function name to begin with a capital letter.
+
+```jsx harmony
+// After being transpiled, the <div> will have a CSS class of 'customClass'
+const DemoComponent = function() {
+  return (
+    <div className='customClass' />
+  );
+};
+```
+
+### ES6 class syntax
+
+In the following example, Kitten extends React.Component:
+
+```jsx harmony
+class Kitten extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <h1>Hi</h1>
+    );
+  }
+}
+```
+
+This creates an ES6 class Kitten which extends the React.Component class. So the Kitten class now has access to many useful React features, such as local state and lifecycle hooks.
+
+Notice the Kitten class has a constructor defined within it that calls super(). It uses super() to call the constructor of the parent class, in this case React.Component.
+
+It is best practice to call a component's constructor with super, and pass props to both. This makes sure the component is initialized properly. 
+
+#### Instructions
+
+MyComponent is defined in the code editor using class syntax. Finish writing the render method so it returns a div element that contains an h1 with the text Hello React!.
+
+```jsx harmony
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    // change code below this line
+    return(
+      <div><h1>Hello React!</h1></div>
+    );
+    // change code above this line
+  }
+};
+```
