@@ -43,7 +43,7 @@ Invalid JSX:
 ```
 
 
-### Instructions: 
+### Instructions
 
 Define a new constant JSX that renders a div which contains the following elements in order:
 
