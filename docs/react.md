@@ -26,7 +26,7 @@ const JSX = <h1>Hello JSX!</h1>;
 
 One important thing to know about nested JSX is that it must return a single element.
 
-Valid JSX:
+**Valid JSX:**
 ```
 <div>
   <p>Paragraph One</p>
@@ -35,7 +35,7 @@ Valid JSX:
 </div>
 ```
 
-Invalid JSX:
+**Invalid JSX:**
 ```
 <p>Paragraph One</p>
 <p>Paragraph Two</p>
@@ -49,10 +49,9 @@ Define a new constant JSX that renders a div which contains the following elemen
 
 An h1, a p, and an unordered list that contains three li items. You can include any text you want within each element.
 
-Note: When rendering multiple elements like this, you can wrap them all in parentheses, but it's not strictly required. Also notice this challenge uses a div tag to wrap all the child elements within a single parent element. If you remove the div, the JSX will no longer transpile. Keep this in mind, since it will also apply when you return JSX elements in React components.
+>**Note:** When rendering multiple elements like this, you can wrap them all in parentheses, but it's not strictly required. Also notice this challenge uses a div tag to wrap all the child elements within a single parent element. If you remove the div, the JSX will no longer transpile. Keep this in mind, since it will also apply when you return JSX elements in React components.
 
-```
-
+```typescript jsx
 const JSX = (<div>
                 <h1>Header</h1>
                 <p>Para</p>
@@ -69,7 +68,7 @@ const JSX = (<div>
 
 To put comments inside JSX, you use the syntax {/* */} to wrap around the comment text.
 
-```
+```typescript jsx
 const JSX = (
   <div>
   {/* This is a Comment */}
@@ -87,7 +86,7 @@ ReactDOM offers a simple method to render React elements to the DOM which looks 
 
 The code editor has a simple JSX component. Use the ReactDOM.render() method to render this component to the page. You can pass defined JSX elements directly in as the first argument and use document.getElementById() to select the DOM node to render them to. There is a div with id='challenge-node' available for you to use. Make sure you don't change the JSX constant.
 
-```jsx harmony
+```typescript jsx
 const JSX = (
   <div>
     <h1>Hello World</h1>
@@ -108,7 +107,7 @@ In fact, the naming convention for all HTML attributes and event references in J
 
 Apply a class of myDiv to the div provided in the JSX code.
 
-```jsx harmony
+```typescript jsx
 const JSX = (
   <div className="myDiv">
     <h1>Add a class to this div</h1>
@@ -120,7 +119,7 @@ const JSX = (
 
 Any JSX element can be written with a self-closing tag, and every element must be closed. The line-break tag, for example, must always be written as <br /> in order to be valid JSX that can be transpiled. A <div>, on the other hand, can be written as <div /> or <div></div>. The difference is that in the first syntax version there is no way to include anything in the <div />.
 
-```jsx harmony
+```typescript jsx
 const JSX = (
   <div>
     <h2>Welcome to React!</h2> <br />
@@ -142,9 +141,9 @@ A stateless component as one that can receive data and render it, but does not m
 
 To create a component with a function, you simply write a JavaScript function that returns either JSX or null. 
 
-**Note**: One important thing to note is that React requires your function name to begin with a capital letter.
+>**Note**: One important thing to note is that React requires your function name to begin with a capital letter.
 
-```jsx harmony
+```typescript jsx
 // After being transpiled, the <div> will have a CSS class of 'customClass'
 const DemoComponent = function() {
   return (
@@ -157,7 +156,7 @@ const DemoComponent = function() {
 
 In the following example, Kitten extends React.Component:
 
-```jsx harmony
+```typescript jsx
 class Kitten extends React.Component {
   constructor(props) {
     super(props);
@@ -195,3 +194,8 @@ class MyComponent extends React.Component {
   }
 };
 ```
+
+## React: Create a Component with Composition
+
+
+
