@@ -14,7 +14,7 @@ However, because JSX is not valid JavaScript, JSX code must be compiled into Jav
 
 It's worth noting that under the hood the challenges are calling ReactDOM.render(JSX, document.getElementById('root')). This function call is what places your JSX into React's own lightweight representation of the DOM. React then uses snapshots of its own DOM to optimize updating only specific parts of the actual DOM.
 
-### Instructions: 
+### Instructions
 
 The current code uses JSX to assign a div element to the constant JSX. Replace the div with an h1 element and add the text Hello JSX! inside it.
 
@@ -248,6 +248,129 @@ class ParentComponent extends React.Component {
 
 ## Use React to Render Nested Components
 
+Component composition is one of React's powerful features. When you work with React, it is important to start thinking about your user interface in terms of components like the App example in the last challenge. You break down your UI into its basic building blocks, and those pieces become the components. This helps to separate the code responsible for the UI from the code responsible for handling your application logic. It can greatly simplify the development and maintenance of complex projects.
+
+### Instructions
+
+There are two functional components defined in the code editor, called TypesOfFruit and Fruits. Take the TypesOfFruit component and compose it, or nest it, within the Fruits component. Then take the Fruits component and nest it within the TypesOfFood component. The result should be a child component, nested within a parent component, which is nested within a parent component of its own!
+
+1. The TypesOfFood component should return a single div element.
+1. The TypesOfFood component should return the Fruits component.
+1. The Fruits component should return the TypesOfFruit component.
+1. The TypesOfFruit component should return the h2 and ul elements.
+
+```jsx harmony
+const TypesOfFruit = () => {
+  return (
+    <div>
+      <h2>Fruits:</h2>
+      <ul>
+        <li>Apples</li>
+        <li>Blueberries</li>
+        <li>Strawberries</li>
+        <li>Bananas</li>
+      </ul>
+    </div>
+  );
+};
+
+const Fruits = () => {
+  return (
+    <div>
+      { /* calls the first fucntion that passes a div */ }
+      <TypesOfFruit />
+    </div>
+  );
+};
+
+class TypesOfFood extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Types of Food:</h1>
+        { /* gets Fruits which gets TypesOfFruit */ }
+        <Fruits />
+      </div>
+    );
+  }
+};
+```
+
+## Compose React Components
+
+Within other components, you can render 
+1. JSX elements
+2. stateless functional components
+3. and ES6 class components
+
+### Instructions
 
 
+
+In the code editor, the TypesOfFood component is already rendering a component called Vegetables. Also, there is the Fruits component from the last challenge.
+
+Nest two components inside of Fruits — first NonCitrus, and then Citrus. Both of these components are provided for you behind the scenes. Next, nest the Fruits class component into the TypesOfFood component, below the h1 header and above Vegetables. The result should be a series of nested components, which uses two different component types.
+
+1. The TypesOfFood component should return a single div element.
+1. The TypesOfFood component should return the Fruits component.
+1. The Fruits component should return the NonCitrus component and the Citrus component.
+1. The TypesOfFood component should return the Vegetables component below the Fruits component.
+
+```jsx harmony
+const NonCitrus = () => {
+  return (
+    <ul>
+    <li>Apple</li>
+    <li>Mango</li>
+    </ul>
+  );
+}
+const Citrus = () => {
+  return (
+    <ul>
+    <li>Lemon</li>
+    <li>Orange</li>
+    </ul>
+  );
+}
+class Fruits extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h2>Fruits:</h2>
+        { /* change code below this line */ }
+        <h3>Non Citrus:</h3>
+        <NonCitrus />
+        <h3>Citrus:</h3>
+        <Citrus />
+      </div>
+    );
+  }
+};
+
+class TypesOfFood extends React.Component {
+  constructor(props) {
+     super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>Types of Food:</h1>
+        <Fruits />
+        <Vegetables />
+      </div>
+    );
+  }
+};
+
+```
+
+## Render a Class Component to the DOM
 
