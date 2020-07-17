@@ -4,7 +4,7 @@ React, created by Facebook, is an open-source JavaScript library for building us
 
 React combines HTML with JavaScript functionality to create its own markup language, JSX. This section will introduce you to all of these concepts and how to implement them for use with your own projects.
 
-## React: Create a Simple JSX ElementPassed
+## Create a Simple JSX ElementPassed
 
 React uses a syntax extension of JavaScript called JSX that allows you to write HTML directly within JavaScript. This has several benefits. It lets you use the full programmatic power of JavaScript within HTML, and helps to keep your code readable. For the most part, JSX is similar to the HTML that you have already learned, however there are a few key differences that will be covered throughout these challenges.
 
@@ -22,7 +22,7 @@ The current code uses JSX to assign a div element to the constant JSX. Replace t
 const JSX = <h1>Hello JSX!</h1>;
 ```
 
-## React: Create a Complex JSX ElementPassed
+## Create a Complex JSX ElementPassed
 
 One important thing to know about nested JSX is that it must return a single element.
 
@@ -64,7 +64,7 @@ const JSX = (<div>
             );
 ```
 
-## React: Add Comments in JSXPassed
+## Add Comments in JSXPassed
 
 To put comments inside JSX, you use the syntax {/* */} to wrap around the comment text.
 
@@ -78,7 +78,7 @@ const JSX = (
 );
 ```
 
-## React: Render HTML Elements to the DOM
+## Render HTML Elements to the DOM
 
 ReactDOM offers a simple method to render React elements to the DOM which looks like this: ReactDOM.render(componentToRender, targetNode), where the first argument is the React element or component that you want to render, and the second argument is the DOM node that you want to render the component to.
 
@@ -97,7 +97,7 @@ const JSX = (
 ReactDOM.render(JSX, document.getElementById('challenge-node'));
 ```
 
-## React: Define an HTML Class in JSXPassed
+## Define an HTML Class in JSXPassed
 
 One key difference in JSX is that you can no longer use the word class to define HTML classes. This is because class is a reserved word in JavaScript. Instead, JSX uses className.
 
@@ -115,7 +115,7 @@ const JSX = (
 );
 ```
 
-## React: Learn About Self-Closing JSX Tags
+## Learn About Self-Closing JSX Tags
 
 Any JSX element can be written with a self-closing tag, and every element must be closed. The line-break tag, for example, must always be written as ```<br />``` in order to be valid JSX that can be transpiled. A ```<div>```, on the other hand, can be written as ```<div />``` or ```<div></div>```. The difference is that in the first syntax version there is no way to include anything in the <div />.
 
@@ -129,7 +129,7 @@ const JSX = (
 );
 ```
 
-## React: Create a Stateless Functional Component
+## Create a Stateless Functional Component
 
 There are two ways to create a React component. 
 * Javascript Function that returns null or JSX
@@ -195,7 +195,7 @@ class MyComponent extends React.Component {
 };
 ```
 
-## React: Create a Component with Composition
+## Create a Component with Composition
 
 Now we will look at how we can compose multiple React components together. Imagine you are building an App and have created three components, a Navbar, Dashboard, and Footer.
 
@@ -246,7 +246,7 @@ class ParentComponent extends React.Component {
 };
 ```
 
-## React: Use React to Render Nested Components
+## Use React to Render Nested Components
 
 
 
