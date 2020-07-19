@@ -374,3 +374,69 @@ class TypesOfFood extends React.Component {
 
 ## Render a Class Component to the DOM
 
+React components are passed into ReactDOM.render() a little differently than JSX elements. For JSX elements, you pass in the name of the element that you want to render. However, for React components, you need to use the same syntax as if you were rendering a nested component, for example ReactDOM.render(<ComponentToRender />, targetNode). You use this syntax for both ES6 class components and functional components.
+
+### Instructions
+
+Both the Fruits and Vegetables components are defined for you behind the scenes. Render both components as children of the TypesOfFood component, then render TypesOfFood to the DOM. There is a div with id='challenge-node' available for you to use.
+
+1. The TypesOfFood component should return a single div element.
+1. The TypesOfFood component should render the Fruits component after the h1 element.
+1. The TypesOfFood component should render the Vegetables component after Fruits.
+1. The TypesOfFood component should render to the DOM within the div with the id challenge-node.
+
+```jsx harmony
+class TypesOfFood extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>Types of Food:</h1>
+        {/* change code below this line */}
+        <Fruits />
+        <Vegetables />
+        {/* change code above this line */}
+      </div>
+    );
+  }
+};
+
+// change code below this line
+ReactDOM.render(<TypesOfFood />, document.getElementById("challenge-node"));
+```
+
+## Write a React Component from Scratch
+
+Define a class MyComponent that extends React.Component. Its render method should return a div that contains an h1 tag with the text: My First React Component! in it. Use this text exactly, the case and punctuation matter. Make sure to call the constructor for your component, too.
+
+Render this component to the DOM using ReactDOM.render(). There is a div with id='challenge-node' available for you to use.
+
+### Instructions 
+1. create a class
+1. extend React.Component
+1. define constuctor and take props as argument and call super(props)
+1. render function with return of the JSX
+
+
+```jsx harmony
+// change code below this line
+class MyComponent extends React.Component {
+  constructor(props) {
+      super(props);
+  };
+  render() {
+    return (
+      <div>
+      <h1>My First React Component!</h1>
+      </div>
+    );
+  };
+};
+
+ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));
+```
+
+## Pass Props to a Stateless Functional Component
+
