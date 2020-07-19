@@ -8,3 +8,4 @@
 * [Redux](redux.md)
 * [React and Redux](react_redux.md)
 * [Bootstrap](bootstrap.md)
+* [Github and React](github_react.md)
