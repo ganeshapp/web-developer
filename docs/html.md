@@ -17,3 +17,15 @@ Example usage, a main element with two child elements nested inside it:
 
 >Note: Many of the new HTML5 tags and their benefits are covered in the Applied Accessibility section.
 
+## Add Placeholder Text to a Text Field
+
+Placeholder text is what is displayed in your input element before your user has inputted anything.
+
+You can create placeholder text like so:
+
+```
+<input type="text" placeholder="this is placeholder text">
+```
+
+>Note: Remember that input elements are self-closing.
+
