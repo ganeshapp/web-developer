@@ -29,3 +29,22 @@ You can create placeholder text like so:
 
 >Note: Remember that input elements are self-closing.
 
+## Radio Buttons
+
+adio buttons are a type of input.
+
+Each of your radio buttons can be nested within its own label element. By wrapping an input element inside of a label element it will automatically associate the radio button input with the label element surrounding it.
+
+All related radio buttons should have the same name attribute to create a radio button group. By creating a radio group, selecting any single radio button will automatically deselect the other buttons within the same group ensuring only one answer is provided by the user.
+
+>It is considered best practice to set a for attribute on the label element, with a value that matches the value of the id attribute of the input element. This allows assistive technologies to create a linked relationship between the label and the child input element. For example:
+
+```
+<label for="indoor">
+  <input id="indoor" type="radio" name="indoor-outdoor"> indoor
+</label>
+<label for="outdoor">
+  <input id="outdoor" type="radio" name="indoor-outdoor"> outdoor
+</label>
+```
+
