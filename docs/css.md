@@ -29,16 +29,18 @@ The idea behind CSS is that you can use a selector to target an HTML element in 
 We can do this by changing the style inline for an element. The property that is responsible for the color of an element's text is the color style property.
 
 Here's how you would set your h2 element's text color to blue:
-```
+
+```html
 <h2 style="color: blue;">Text</h2>
 ```
+
 >Note that it is a good practice to end inline style declarations with a ; .
 
 ## Use CSS Selectors to Style Elements
 
 With CSS, there are hundreds of CSS properties that you can use to change the way an element looks on your page. At the top of your code. Inside that style block, you can create a CSS selector for all h2 elements. For example, if you wanted all h2 elements to be red, you would add a style rule that looks like this:
 
-```
+```html
 <style>
   h2 {
     color: red;
@@ -50,19 +52,21 @@ With CSS, there are hundreds of CSS properties that you can use to change the wa
 
 ## Use a CSS Class to Style an Element
 
-Classes are reusable styles that can be added to HTML elements. 
-```
+Classes are reusable styles that can be added to HTML elements.
+
+```html
 <style>
   .blue-text {
     color: blue;
   }
 </style>
 ```
+
 You can see that we've created a CSS class called blue-text within the ```<style>``` tag. You can apply a class to an HTML element like this: ```<h2 class="blue-text">Text</h2>``` Note that in your CSS style element, class names start with a period. In your HTML elements' class attribute, the class name does not include the period.
 
 ## Font CSS
- 
-```
+
+```css
 h1 {
   font-size: 30px;
   font-family: sans-serif;
@@ -70,11 +74,4 @@ h1 {
 ```
 
 ## Import a Google Font
-
-
-
-
-
-
-
 
