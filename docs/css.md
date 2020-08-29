@@ -75,3 +75,96 @@ h1 {
 
 ## Import a Google Font
 
+[Google Fonts](https://fonts.google.com/) is a free library of web fonts that you can use in your CSS by referencing the font's URL
+
+```
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+```
+
+Now you can use the Lobster font in your CSS by using Lobster as the FAMILY_NAME as in the following example:
+font-family: FAMILY_NAME, GENERIC_NAME;
+
+>The GENERIC_NAME is optional, and is a fallback font in case the other specified font is not available. Family names are case-sensitive and need to be wrapped in quotes if there is a space in the name. For example, you need quotes to use the "Open Sans" font, but not to use the Lobster font.
+
+## Size Your Images
+
+```
+<style>
+  .larger-image {
+    width: 500px;
+  }
+</style>
+```
+
+## Add Borders Around Your Elements
+
+```
+<style>
+  .thin-red-border {
+    border-color: red;
+    border-width: 5px;
+    border-style: solid;
+  }
+</style>
+```
+
+Add Rounded Corners with border-radius
+
+```
+.thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 10px;
+  }
+```
+
+In addition to pixels, you can also specify the border-radius using a percentage.
+
+### Make Circular Images with a border-radius
+
+```
+.thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+  }
+```
+
+## Give a Background Color to a div Element
+
+```
+.green-background {
+  background-color: green;
+}
+```
+
+## Set the id of an Element
+
+In addition to classes, each HTML element can also have an id attribute.
+
+There are several benefits to using id attributes: You can use an id to style a single element and later you'll learn that you can use them to select and modify specific elements with JavaScript.
+
+>id attributes should be unique. Browsers won't enforce this, but it is a widely agreed upon best practice. So please don't give more than one element the same id attribute.
+
+```
+<h2 id="cat-photo-app">
+```
+
+### Use an id Attribute to Style an Element
+
+One cool thing about id attributes is that, like classes, you can style them using CSS.
+
+>However, an id is not reusable and should only be applied to one element. An id also has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the id will be applied.
+
+```
+#cat-photo-element {
+  background-color: green;
+}
+```
+
+>Note that inside your style element, you always reference classes by putting a . in front of their names. You always reference ids by putting a # in front of their names.
+
+## Adjust the Padding of an Element
+
