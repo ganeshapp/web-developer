@@ -6,6 +6,10 @@ Course: https://www.youtube.com/watch?v=bxmDnn7lrnk&list=PL4cUxeGkcC9gpXORlEHjc5
 
 ## Tailwind.css Resources
 
+Make blocks and get the code: https://devdojo.com/tails/app#_=_
+https://www.producthunt.com/posts/tails-2
+
+
 Blocks: https://tailblocks.cc/
 
 
