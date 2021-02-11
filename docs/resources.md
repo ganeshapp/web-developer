@@ -18,10 +18,12 @@ Paid with some free samples: https://tailwindui.com/
 Header Videos
 
 Coverr: https://coverr.co/
-Mix Kit: https://mixkit.co/
-Pexels: https://www.pexels.com/
-Loop Videos: http://stock.loopvidz.com/
 
+Mix Kit: https://mixkit.co/
+
+Pexels: https://www.pexels.com/
+
+Loop Videos: http://stock.loopvidz.com/
 
 ## Stock Images
 
