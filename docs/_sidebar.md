@@ -10,3 +10,4 @@
 * [Bootstrap](bootstrap.md)
 * [Github and React](github_react.md)
 * [Tailwind](tailwind.md)
+* [Resources](resources.md)
